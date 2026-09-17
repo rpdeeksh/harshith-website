@@ -65,7 +65,16 @@ export const WeddingProvider = ({ children }) => {
   // Ceremonies and events
   const [events, setEvents] = useState(() => {
     const saved = localStorage.getItem("wedding_events");
-    return saved ? JSON.parse(saved) : INITIAL_EVENTS;
+    if (!saved) return INITIAL_EVENTS;
+    try {
+      const parsed = JSON.parse(saved);
+      return INITIAL_EVENTS.map(initial => {
+        const found = parsed.find(e => e.id === initial.id);
+        return found ? { ...found, ...initial } : initial;
+      });
+    } catch {
+      return INITIAL_EVENTS;
+    }
   });
 
   // Guest invitees list
@@ -95,7 +104,16 @@ export const WeddingProvider = ({ children }) => {
   // Photos
   const [photos, setPhotos] = useState(() => {
     const saved = localStorage.getItem("wedding_photos");
-    return saved ? JSON.parse(saved) : INITIAL_PHOTOS;
+    if (!saved) return INITIAL_PHOTOS;
+    try {
+      const parsed = JSON.parse(saved);
+      return INITIAL_PHOTOS.map(initial => {
+        const found = parsed.find(p => p.id === initial.id);
+        return found ? { ...found, ...initial } : initial;
+      });
+    } catch {
+      return INITIAL_PHOTOS;
+    }
   });
 
   // Navigation & View Mode

@@ -3,7 +3,6 @@ import { useWedding } from "../context/WeddingContext";
 import { 
   Calendar, 
   Utensils, 
-  CheckCircle2, 
   Flame, 
   Compass, 
   Phone, 
@@ -12,18 +11,14 @@ import {
   LogOut, 
   ShieldCheck, 
   Eye, 
-  BookOpen,
-  Edit3
+  BookOpen
 } from "lucide-react";
-import { SectionContentEditorModal } from "./admin/SectionContentEditorModal";
 
 export const Navbar = ({ onOpenInviteCard }) => {
   const { currentUser, logout, viewMode, setViewMode, weddingDetails } = useWedding();
   const [activeItem, setActiveItem] = useState("our-definition");
-  const [editorSection, setEditorSection] = useState(null);
-  const [isEditorOpen, setIsEditorOpen] = useState(false);
 
-  // Top Selection Icons: 8 in Admin mode (including RSVP), 7 in Guest mode (RSVP removed per Action 17)
+  // Top Selection Icons: 7 essential sections in Guest / Portal mode (RSVP removed)
   const allNavItems = [
     {
       id: "our-definition",
@@ -46,14 +41,6 @@ export const Navbar = ({ onOpenInviteCard }) => {
       href: "#feast",
       scope: "Royal Pangath"
     },
-    ...(currentUser?.role === "admin" ? [{
-      id: "rsvp",
-      label: "RSVP",
-      icon: CheckCircle2,
-      href: "#rsvp",
-      scope: "RSVP Configuration (Admin)",
-      adminOnly: true
-    }] : []),
     {
       id: "traditions",
       label: "Traditions",
@@ -87,10 +74,15 @@ export const Navbar = ({ onOpenInviteCard }) => {
   const handleNavClick = (item) => {
     setActiveItem(item.id);
     
-    // In Admin Suite mode, open Section Editor directly (Action 21 / 20b)
-    if (viewMode === "admin" || item.adminOnly) {
-      setEditorSection(item.id);
-      setIsEditorOpen(true);
+    // If currently in Admin Suite mode, switch to portal view so section is mounted
+    if (viewMode === "admin") {
+      setViewMode("guest");
+      setTimeout(() => {
+        const target = document.querySelector(item.href);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
       return;
     }
 
@@ -104,33 +96,43 @@ export const Navbar = ({ onOpenInviteCard }) => {
     <header className="sticky top-0 z-40 bg-[#050e18]/95 backdrop-blur-xl border-b border-[#D4AF37]/30 shadow-xl">
       
       {/* Top Header Bar: Logo & Credentials Control */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-800/80">
-        <div className="flex items-center justify-between h-16">
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${viewMode !== "admin" ? "border-b border-slate-800/80" : ""}`}>
+        <div className="flex items-center justify-between h-16 sm:h-18">
           
-          {/* Brand Emblem & Couple Title (Actions 1 & 2) */}
-          <a href="#" className="flex items-center gap-2.5 group">
-            <img 
-              src="/wedding-logo.png" 
-              alt="Nidhi & Harshith Wedding Celebration" 
-              className="w-10 h-10 rounded-full object-cover border-2 border-[#D4AF37]/70 shadow-md group-hover:scale-105 transition-transform" 
-            />
-            <div>
-              <div className="font-playfair text-base sm:text-lg font-bold text-white flex items-center gap-1.5 tracking-wide">
-                <span>Harshith</span>
-                <span className="text-amber-300 font-serif font-light text-base">&</span>
-                <span>Nidhi</span>
+          {/* Brand Emblem, Couple Title & Admin Badge */}
+          <div className="flex items-center gap-3">
+            <a href="#" className="flex items-center gap-2.5 group">
+              <img 
+                src="/wedding-logo.png" 
+                alt="Nidhi & Harshith Wedding Celebration" 
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border-2 border-[#D4AF37]/70 shadow-md group-hover:scale-105 transition-transform" 
+              />
+              <div>
+                <div className="font-playfair text-base sm:text-lg font-bold text-white flex items-center gap-1.5 tracking-wide">
+                  <span>Harshith</span>
+                  <span className="text-amber-300 font-serif font-light text-base">&</span>
+                  <span>Nidhi</span>
+                </div>
+                <div className="text-[10px] text-amber-300/90 font-serif tracking-wider">
+                  "Where the Sea Meets the Forest"
+                </div>
               </div>
-              <div className="text-[10px] text-amber-300/90 font-serif tracking-wider">
-                "Where the Sea Meets the Forest"
-              </div>
-            </div>
-          </a>
+            </a>
 
-          {/* Controls Right */}
-          <div className="flex items-center gap-2.5">
+            {/* In Admin Suite Mode: Show Sleek Status Badge */}
+            {viewMode === "admin" && (
+              <span className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wide ml-2">
+                <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+                Admin Command Suite
+              </span>
+            )}
+          </div>
+
+          {/* Controls Right - Cleanly Centered & Aligned */}
+          <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={onOpenInviteCard}
-              className="py-1.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-[#D4AF37]/40 text-amber-300 text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-sm"
+              className="py-2 px-3 sm:px-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-[#D4AF37]/40 text-amber-300 text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-sm hover:border-[#D4AF37]"
             >
               <Download className="w-3.5 h-3.5 text-amber-400" />
               <span className="hidden sm:inline">Invitation PNG</span>
@@ -139,11 +141,15 @@ export const Navbar = ({ onOpenInviteCard }) => {
             {currentUser?.role === "admin" && (
               <button
                 onClick={() => setViewMode(viewMode === "admin" ? "guest" : "admin")}
-                className="py-1.5 px-3 rounded-xl bg-gradient-to-r from-blue-900/70 to-indigo-900/70 hover:opacity-90 border border-blue-500/50 text-cyan-200 text-xs font-semibold flex items-center gap-1.5 cursor-pointer shadow-sm"
+                className={`py-2 px-3 sm:px-3.5 rounded-xl border text-xs font-semibold flex items-center gap-1.5 cursor-pointer shadow-sm transition-all ${
+                  viewMode === "admin"
+                    ? "bg-gradient-to-r from-[#0F4C81] to-[#2E6F40] hover:brightness-110 text-white border-amber-400/60 shadow-md"
+                    : "bg-gradient-to-r from-blue-900/70 to-indigo-900/70 hover:opacity-90 border-blue-500/50 text-cyan-200"
+                }`}
               >
                 {viewMode === "admin" ? (
                   <>
-                    <Eye className="w-3.5 h-3.5" />
+                    <Eye className="w-3.5 h-3.5 text-amber-300" />
                     <span>Guest View</span>
                   </>
                 ) : (
@@ -155,13 +161,18 @@ export const Navbar = ({ onOpenInviteCard }) => {
               </button>
             )}
 
-            <div className="flex items-center gap-2 pl-2 border-l border-slate-800">
-              <span className="text-[11px] text-slate-300 hidden md:inline font-medium">
-                {currentUser?.name}
-              </span>
+            <div className="flex items-center gap-2 sm:gap-2.5 pl-2 sm:pl-3 border-l border-slate-800">
+              <div className="hidden md:flex flex-col text-right">
+                <span className="text-[11px] text-white font-medium leading-tight">
+                  {currentUser?.name}
+                </span>
+                <span className="text-[9px] text-amber-400/80 uppercase tracking-wider font-semibold">
+                  {currentUser?.role === "admin" ? "All Access" : "Guest"}
+                </span>
+              </div>
               <button
                 onClick={logout}
-                className="p-1.5 rounded-xl bg-slate-900 hover:bg-red-950/60 text-slate-400 hover:text-red-300 border border-slate-800 transition-colors cursor-pointer"
+                className="p-2 rounded-xl bg-slate-900 hover:bg-red-950/60 text-slate-400 hover:text-red-300 border border-slate-800 hover:border-red-800/60 transition-colors cursor-pointer"
                 title="Log Out"
               >
                 <LogOut className="w-3.5 h-3.5" />
@@ -172,72 +183,50 @@ export const Navbar = ({ onOpenInviteCard }) => {
         </div>
       </div>
 
-      {/* Taskbar: Top Selection Icons with EQUAL SPACING and EQUAL CENTERING (Action 3, 4 & 21) */}
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-        <nav className="flex items-center justify-between w-full overflow-x-auto custom-scrollbar py-1.5 gap-1 sm:gap-2">
-          {allNavItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = activeItem === item.id;
+      {/* Taskbar: Top Selection Icons ONLY visible in Guest / Portal View (Removed in Admin Suite) */}
+      {viewMode !== "admin" && (
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <nav className="flex items-center justify-between w-full overflow-x-auto custom-scrollbar py-2 gap-1.5 sm:gap-2.5">
+            {allNavItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeItem === item.id;
 
-            return (
-              <div
-                key={item.id}
-                className="flex-1 min-w-[76px] sm:min-w-[90px] relative group"
-              >
-                <a
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item);
-                  }}
-                  className={`w-full py-1.5 px-1 sm:px-2 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-200 cursor-pointer select-none ${
-                    isActive
-                      ? "bg-slate-900 border border-[#D4AF37] text-white shadow-sm"
-                      : "hover:bg-slate-900/60 text-slate-400 hover:text-slate-200 border border-transparent"
-                  }`}
-                  title={item.scope}
+              return (
+                <div
+                  key={item.id}
+                  className="flex-1 min-w-[85px] sm:min-w-[100px] text-center"
                 >
-                  <Icon
-                    className={`w-4 h-4 mb-0.5 transition-transform group-hover:scale-110 ${
-                      isActive ? "text-[#D4AF37]" : "text-slate-400 group-hover:text-amber-300"
-                    }`}
-                  />
-                  <span
-                    className={`text-[10px] sm:text-[11px] font-semibold tracking-tight whitespace-nowrap ${
-                      isActive ? "text-amber-300 font-bold" : "text-slate-300"
-                    }`}
-                  >
-                    {item.label}
-                  </span>
-                </a>
-
-                {/* Admin Quick Edit Button on Hover (Action 21) */}
-                {currentUser?.role === "admin" && (
-                  <button
-                    type="button"
+                  <a
+                    href={item.href}
                     onClick={(e) => {
-                      e.stopPropagation();
-                      setEditorSection(item.id);
-                      setIsEditorOpen(true);
+                      e.preventDefault();
+                      handleNavClick(item);
                     }}
-                    className="absolute -top-1 -right-1 p-1 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-950 opacity-0 group-hover:opacity-100 transition-opacity shadow-md z-10 cursor-pointer"
-                    title={`Edit ${item.label}`}
+                    className={`w-full py-2 px-1.5 sm:px-2.5 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-200 cursor-pointer select-none ${
+                      isActive
+                        ? "bg-slate-900 border border-[#D4AF37] text-white shadow-md ring-1 ring-[#D4AF37]/30"
+                        : "hover:bg-slate-900/60 text-slate-400 hover:text-slate-200 border border-transparent"
+                    }`}
                   >
-                    <Edit3 className="w-2.5 h-2.5" />
-                  </button>
-                )}
-              </div>
-            );
-          })}
-        </nav>
-      </div>
-
-      {/* Section Content Editor Modal for Admin (Action 21 / 20b) */}
-      <SectionContentEditorModal
-        isOpen={isEditorOpen}
-        onClose={() => setIsEditorOpen(false)}
-        initialSection={editorSection || "our-definition"}
-      />
+                    <Icon
+                      className={`w-4 h-4 mb-1 transition-transform group-hover:scale-110 ${
+                        isActive ? "text-[#D4AF37]" : "text-slate-400 group-hover:text-amber-300"
+                      }`}
+                    />
+                    <span
+                      className={`text-[10.5px] sm:text-[11.5px] font-semibold tracking-tight whitespace-nowrap ${
+                        isActive ? "text-amber-300 font-bold" : "text-slate-300"
+                      }`}
+                    >
+                      {item.label}
+                    </span>
+                  </a>
+                </div>
+              );
+            })}
+          </nav>
+        </div>
+      )}
 
     </header>
   );

@@ -179,51 +179,51 @@ export const STORY_TIMELINE = [
 // Wedding Events with Culture-Inspired Karnataka Icons
 export const INITIAL_EVENTS = [
   {
-    id: "evt-mehendi",
-    name: "Mehendi Ceremony",
-    icon: "🌿",
-    badge: "Henna & Melodies",
-    day: "Day 1 - Afternoon",
-    date: "Saturday, 12 December 2026",
-    time: "02:30 PM - 05:30 PM",
-    venue: "Courtyard Mandap, Shri Gopal Krishna Kalamandir",
-    address: "Adjacent to MVSSN, Nagoor, Karnataka",
-    mapUrl: "https://maps.google.com/?q=Shri+Gopal+Krishna+Kalamandir+Nagoor",
-    dressCode: "Coastal Teal & Forest Fern Green (Traditional Festive)",
-    description: "Intricate herbal henna designs inspired by coconut fronds and forest leaves, accompanied by folk Konkani geeths and laughter.",
-    coverImage: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=80",
-    highlights: ["Artisan Mehendi Artists", "Traditional Coastal High-Tea & Snacks", "Live Konkani Folk Harmonies"]
-  },
-  {
     id: "evt-haldi",
     name: "Haldi & Shringara",
     icon: "🌼",
     badge: "Golden Blessings",
-    day: "Day 1 - Evening",
-    date: "Saturday, 12 December 2026",
-    time: "05:45 PM - 07:30 PM",
-    venue: "Cultural Open Lawns, Kalamandir",
-    address: "Adjacent to MVSSN, Nagoor, Karnataka",
-    mapUrl: "https://maps.google.com/?q=Shri+Gopal+Krishna+Kalamandir+Nagoor",
+    day: "Day 1 - Afternoon",
+    date: "Friday, 11 December 2026",
+    time: "11:00 AM - 01:30 PM",
+    venue: "Groom Kuteera",
+    address: "Nagoor / Kundapura, Coastal Karnataka",
+    mapUrl: "https://maps.google.com/?q=Nagoor+Karnataka",
     dressCode: "Temple Turmeric Yellow & Kasavu Cream",
     description: "Sacred turmeric paste infused with coastal sandalwood and river water applied with blessings by aunts and elders amidst floral showers.",
-    coverImage: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80",
-    highlights: ["Floral Rain Shower", "Sandalwood & Turmeric Ritual", "Family Garba & Coastal Dance"]
+    coverImage: "/haldi-ceremony-watercolor.jpg",
+    highlights: ["Floral Rain Shower", "Sandalwood & Turmeric Ritual", "Family Blessings & Coastal Music"]
+  },
+  {
+    id: "evt-mehendi",
+    name: "Mehendi Ceremony",
+    icon: "🌿",
+    badge: "Henna & Melodies",
+    day: "Day 1 - Evening",
+    date: "Friday, 11 December 2026",
+    time: "06:00 PM - 09:30 PM",
+    venue: "Groom Kuteera",
+    address: "Nagoor / Kundapura, Coastal Karnataka",
+    mapUrl: "https://maps.google.com/?q=Nagoor+Karnataka",
+    dressCode: "Coastal Teal & Forest Fern Green (Traditional Festive)",
+    description: "Intricate herbal henna designs inspired by coconut fronds and forest leaves, accompanied by folk Konkani geeths and laughter.",
+    coverImage: "/mehendi-ceremony-watercolor.jpg",
+    highlights: ["Artisan Mehendi Artists", "Traditional Coastal High-Tea & Snacks", "Live Konkani Folk Harmonies"]
   },
   {
     id: "evt-phool-muddi",
     name: "Phool Muddi (Engagement)",
     icon: "🪔",
     badge: "Traditional GSB Ritual",
-    day: "Day 1 - Night",
+    day: "Day 2 - Evening",
     date: "Saturday, 12 December 2026",
-    time: "07:45 PM Onwards",
-    venue: "Main Kalamandir Royal Hall",
+    time: "05:30 PM Onwards",
+    venue: "Gopal Krishna Kala Mandir, Nagoor",
     address: "Adjacent to MVSSN, Nagoor, Karnataka",
     mapUrl: "https://maps.google.com/?q=Shri+Gopal+Krishna+Kalamandir+Nagoor",
     dressCode: "Regal Silk & Traditional Zari Sarees / Kurta Pajama",
     description: "The auspicious Konkani ring exchange ceremony with exchange of flowers, coconuts, fruit baskets, and traditional music by Chande & Flute.",
-    coverImage: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80",
+    coverImage: "/gsb-phoolmuddi-watercolor.jpg",
     highlights: ["Ring Ceremony & Elder Blessings", "Interactive Previous-Day Sangeet & Games", "Grand Festive Dinner Feast"]
   },
   {
@@ -231,15 +231,15 @@ export const INITIAL_EVENTS = [
     name: "The Auspicious Muhurtham",
     icon: "💐",
     badge: "Sacred Vivah",
-    day: "Day 2 - Main Wedding Day",
+    day: "Day 3 - (Main Wedding)",
     date: "Sunday, 13 December 2026",
-    time: "Muhurtham: 10:15 AM - 11:45 AM",
-    venue: "Central Vivah Mandap, Shri Gopal Krishna Kalamandir",
+    time: "Muhurtham: 10:15 AM",
+    venue: "Gopal Krishna Kala Mandir, Nagoor",
     address: "Adjacent to MVSSN, Nagoor, Karnataka",
     mapUrl: "https://maps.google.com/?q=Shri+Gopal+Krishna+Kalamandir+Nagoor",
     dressCode: "Kanjeevaram Silk & Kasavu Zari Dhoti with Angavastram",
     description: "The sacred Vedic vivah: Kanyadaan, Mangalasutra Dharane, Saptapadi around the holy fire, and blessings from family priests and elders.",
-    coverImage: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=900&q=80",
+    coverImage: "/gsb-wedding-watercolor.jpg",
     highlights: ["Nadaswaram & Chande Melam", "Kanyadaan & Mangalasutra Dharane", "Traditional GSB Banana-Leaf Lunch"]
   },
   {
@@ -247,16 +247,16 @@ export const INITIAL_EVENTS = [
     name: "Grand Wedding Reception",
     icon: "✨",
     badge: "Evening Gala",
-    day: "Day 2 - Evening",
-    date: "Sunday, 13 December 2026",
+    day: "Day 6 - Evening",
+    date: "Wednesday, 16 December 2026",
     time: "07:00 PM Onwards",
-    venue: "Open Star-lit Grand Lawns, Kalamandir",
-    address: "Adjacent to MVSSN, Nagoor, Karnataka",
-    mapUrl: "https://maps.google.com/?q=Shri+Gopal+Krishna+Kalamandir+Nagoor",
+    venue: "Shree Vidyadhiraj Sabha Bhavan, Dandeli",
+    address: "Dandeli, Uttara Kannada, Karnataka",
+    mapUrl: "https://maps.google.com/?q=Shree+Vidyadhiraj+Sabha+Bhavan+Dandeli",
     dressCode: "Royal Evening Elegance & Indo-Western Couture",
-    description: "An enchanting evening of music, cake cutting, congratulations, candid photography, and a lavish celebratory royal feast.",
-    coverImage: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=900&q=80",
-    highlights: ["Couple Grand Entry", "Musical Performances & Live Band", "Multi-Cuisine Royal Banquet"]
+    description: "An enchanting evening of music, celebration, candid photography, and a lavish celebratory royal feast in the heart of Dandeli.",
+    coverImage: "/wedding-reception-watercolor.jpg",
+    highlights: ["Grand Reception in Dandeli", "Musical Performances & Live Band", "Multi-Cuisine Royal Banquet"]
   }
 ];
 
@@ -297,28 +297,28 @@ export const KONKANI_TRADITIONS = [
 // Section 7: Traditional GSB Wedding Feast Menu
 export const WEDDING_FEAST_MENU = [
   {
-    name: "Dalitoy",
+    name: "Dalitoy (Daalithoy)",
     kannada: "ದಾಳಿತೊಯ್",
     category: "Signature Konkani Dal",
     desc: "The pride and soul of GSB Konkani cuisine. Creamy slow-simmered yellow toor dal tempered with mustard, hing, green chillies, and fresh curry leaves in pure cow's ghee.",
     tag: "Crown Jewel",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80"
+    image: "/dalitoy-watercolor.jpg"
   },
   {
-    name: "Saaru (Rasam)",
-    kannada: "ಸಾರು",
-    category: "Aromatic Broth",
-    desc: "Fragrant, tangy tomato and tamarind broth boiled with freshly roasted coastal spices, coriander seeds, and cumin to awaken the palate.",
-    tag: "Digestive & Aromatic",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80"
+    name: "Jeevkadgi Phodi",
+    kannada: "ಜೀವ್ಕಡ್ಗಿ ಫೋಡಿ",
+    category: "Crispy Breadfruit Fritters",
+    desc: "Crispy rava-crusted slices of tender breadfruit (jeevkadgi) spiced with coastal red chilli masala and pan-roasted to golden perfection in pure ghee.",
+    tag: "Golden Crunch",
+    image: "/jeevkadgi-phodi-watercolor.jpg"
   },
   {
-    name: "Batata Song",
+    name: "Batate Song (Batata Song)",
     kannada: "ಬಟಾಟೆ ಸಾಂಗ್",
     category: "Spicy Coastal Curry",
     desc: "Tender baby potatoes slow-cooked in a fiery, deep-red Byadgi chilli paste, lots of caramelised onions, and tangy tamarind extract.",
     tag: "Fiery & Tangy",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80"
+    image: "/batate-song-watercolor.jpg"
   },
   {
     name: "Tendle Bibbe Upkari",
@@ -326,7 +326,7 @@ export const WEDDING_FEAST_MENU = [
     category: "Traditional Stir-Fry",
     desc: "Crunchy ivy gourds (tendle) tossed with tender, milky wet cashews (bibbe), grated coconut, and mustard seeds. An authentic coastal wedding delicacy.",
     tag: "Wedding Classic",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
+    image: "/tendle-upkari-watercolor.jpg"
   },
   {
     name: "Pineapple Sasam",
@@ -334,39 +334,39 @@ export const WEDDING_FEAST_MENU = [
     category: "Sweet & Savoury Relish",
     desc: "Juicy ripe pineapple chunks folded into a ground mustard seed, red chilli, and fresh coconut gravy, sweetened with organic jaggery.",
     tag: "Sweet-Savory Harmony",
-    image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=600&q=80"
+    image: "/pineapple-sasam-watercolor.jpg"
   },
   {
     name: "Happolu & Vodi",
     kannada: "ಹಪ್ಪಳ & ವೊಡಿ",
     category: "Crispy Accompaniments",
-    desc: "Sun-dried urad dal papads, spiced jackfruit crackers (Pelakai Happolu), and crisp rice vodi fried to perfection.",
+    desc: "Sun-dried urad dal papads, spiced carrot/jackfruit crackers (Happolu), and crisp rice vodi fried to perfection.",
     tag: "Crunchy Delights",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+    image: "/happolu-vodi-watercolor.jpg"
   },
   {
-    name: "Chana Dal Payasam",
-    kannada: "ಕಡಲೆ ಬೇಳೆ ಪಾಯಸ",
-    category: "Auspicious Dessert",
-    desc: "Rich dessert cooked with Bengal gram lentils, dense coconut milk, organic jaggery, cardamom, and ghee-roasted cashews and raisins.",
-    tag: "Festive Sweet",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80"
+    name: "Patrode",
+    kannada: "ಪತ್ರೊಡೆ",
+    category: "Colocasia Leaf Rolls",
+    desc: "Steamed and spiced colocasia (taro) leaf rolls layered with spiced rice-dal batter, roasted on tawa with a drizzle of pure coconut oil.",
+    tag: "Heritage Delicacy",
+    image: "/patrode-watercolor.jpg"
   },
   {
-    name: "Godshe (Sweet Porridge)",
+    name: "Moogachem Godshe",
     kannada: "ಗೋಡ್ಶೆ",
-    category: "Konkani Tradition",
-    desc: "A warm, soul-soothing festive Konkani pudding made with wheat semolina or moong dal, coconut milk, and crushed green cardamom.",
+    category: "Konkani Festive Dessert",
+    desc: "A warm, soul-soothing festive Konkani pudding (Moogachem Godshem) made with roasted moong dal, rich coconut milk, organic jaggery, and crushed green cardamom.",
     tag: "Soul-Soothing",
-    image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80"
+    image: "/godshe-watercolor.jpg"
   },
   {
-    name: "Steaming Rice & Pure Ghee",
-    kannada: "ಅನ್ನ & ತುಪ್ಪ",
-    category: "The Foundation",
-    desc: "Piping hot fragrant coastal boiled/white rice served with a generous pour of aromatic desi cow's ghee.",
-    tag: "Sacred Base",
-    image: "https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=600&q=80"
+    name: "Gajbaje",
+    kannada: "ಗಜಬಜೆ",
+    category: "Festive Mixed Curry",
+    desc: "A rich and celebratory Konkani mixed vegetable curry featuring seasonal vegetables, tender coconut paste, hog plums, and mustard seasoning.",
+    tag: "Festive Medley",
+    image: "/gajbaje-watercolor.jpg"
   }
 ];
 
@@ -433,35 +433,35 @@ export const INITIAL_PHOTOS = [
     id: "ph-2",
     title: "Coastal Sunset at Maravanthe",
     category: "Pre-wedding",
-    url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+    url: "/maravanthe-sunset-watercolor.jpg",
     caption: "Where coastal waves whisper ancient blessings to the horizon"
   },
   {
     id: "ph-3",
     title: "Dandeli Kali River & Misty Jungle",
     category: "Pre-wedding",
-    url: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1000&q=80",
+    url: "/dandeli-kali-river-watercolor.jpg",
     caption: "Among the evergreen canopies and rushing waters of the Western Ghats"
   },
   {
     id: "ph-4",
     title: "Traditional Kasavu & Temple Gold Shringara",
     category: "Engagement ceremony",
-    url: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1000&q=80",
+    url: "/kasavu-temple-gold-shringara-watercolor.jpg",
     caption: "Adorned in royal red Kanjeevaram and sacred golden mundu"
   },
   {
     id: "ph-5",
     title: "Childhood Smiles & Joyous Memories",
     category: "Childhood memories",
-    url: "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&w=1000&q=80",
+    url: "/childhood-smiles-memories-watercolor.jpg",
     caption: "Growing up surrounded by love, grandparents' stories, and laughter"
   },
   {
     id: "ph-6",
     title: "Family Gatherings & Elder Blessings",
     category: "Family moments",
-    url: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80",
+    url: "/family-gatherings-blessings-watercolor.jpg",
     caption: "Two families coming together with joy, music, and unconditional love"
   }
 ];

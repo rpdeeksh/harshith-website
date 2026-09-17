@@ -102,8 +102,8 @@ export const AdminDashboard = ({ onOpenInviteCard }) => {
         </div>
       </div>
 
-      {/* Admin Feature Navigation Pills */}
-      <div className="flex space-x-2 overflow-x-auto pb-2 custom-scrollbar">
+      {/* Admin Feature Navigation Pills - Cleanly Aligned & Equally Distributed */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5">
         {TABS.map((tab) => {
           const Icon = tab.icon;
           const isActive = (adminTab === tab.id) || (adminTab === "overview" && tab.id === "finances");
@@ -112,16 +112,16 @@ export const AdminDashboard = ({ onOpenInviteCard }) => {
             <button
               key={tab.id}
               onClick={() => setAdminTab(tab.id)}
-              className={`flex-shrink-0 py-2.5 px-4 rounded-2xl border transition-all text-xs flex items-center gap-2.5 cursor-pointer ${
+              className={`py-3 px-2.5 rounded-2xl border transition-all text-xs flex flex-col justify-center items-center text-center gap-1.5 cursor-pointer shadow-sm ${
                 isActive
                   ? "bg-gradient-to-r from-[#0F4C81] to-[#2E6F40] text-white border-[#D4AF37] shadow-lg ring-1 ring-[#D4AF37]/50"
-                  : "bg-slate-900/80 hover:bg-slate-800/80 text-slate-300 border-slate-800"
+                  : "bg-slate-900/80 hover:bg-slate-800/80 text-slate-300 border-slate-800 hover:border-slate-700"
               }`}
             >
-              <Icon className={`w-4 h-4 ${isActive ? "text-amber-300" : "text-slate-400"}`} />
-              <div className="text-left">
-                <div className="font-bold">{tab.label}</div>
-                <div className="text-[10px] opacity-80">{tab.badge}</div>
+              <Icon className={`w-4 h-4 flex-shrink-0 ${isActive ? "text-amber-300" : "text-slate-400"}`} />
+              <div className="w-full overflow-hidden">
+                <div className="font-bold text-[11px] leading-tight truncate">{tab.label}</div>
+                <div className="text-[9.5px] opacity-75 mt-0.5 truncate">{tab.badge}</div>
               </div>
             </button>
           );

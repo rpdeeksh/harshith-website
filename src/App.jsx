@@ -9,7 +9,6 @@ import { SideScrollEvents } from "./components/SideScrollEvents";
 import { WeddingVenueAndTravel } from "./components/sections/WeddingVenueAndTravel";
 import { PhotoGallery } from "./components/PhotoGallery";
 import { RoyalPangath } from "./components/sections/RoyalPangath";
-import { RsvpFormSection } from "./components/sections/RsvpFormSection";
 import { SacredRituals } from "./components/sections/SacredRituals";
 import { SpecialGuestAndCulture } from "./components/sections/SpecialGuestAndCulture";
 import { LineageAndBlessings } from "./components/sections/LineageAndBlessings";
@@ -82,7 +81,7 @@ function WeddingPortalContent() {
             {/* 5. Royal Pangath */}
             <RoyalPangath />
 
-            {/* 7. Sacred rituals */}
+            {/* 6. Sacred rituals */}
             <SacredRituals />
 
             {/* 8. Special guest appearance & cultural showcase section */}
@@ -111,7 +110,7 @@ function WeddingPortalContent() {
       />
 
       {/* Footer */}
-      <footer className="mt-20 border-t border-[#D4AF37]/30 bg-slate-950/95 py-10 px-4 text-xs text-slate-400">
+      <footer className="mt-16 border-t border-[#D4AF37]/30 bg-slate-950/95 py-10 px-4 sm:px-6 lg:px-8 text-xs text-slate-400">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div className="space-y-1">
             <div className="flex items-center justify-center md:justify-start gap-2.5">
@@ -134,7 +133,7 @@ function WeddingPortalContent() {
             </span>
           </div>
 
-          <div className="text-[11px] text-slate-500">
+          <div className="text-[11px] text-slate-500 text-center md:text-right">
             Coastal Karnataka (GSB Konkani) & Dandeli (Western Ghats) Dual Celebration Portal • 2026
           </div>
         </div>

@@ -85,19 +85,19 @@ export const HomeHero = ({ onOpenInviteCard, onOpenGames, onOpenStream }) => {
                 </p>
               </div>
 
-              {/* Coastal Badges */}
-              <div className="mt-5 space-y-2">
-                <div className="flex items-center gap-2 text-xs text-blue-200/90 bg-blue-950/50 p-2 rounded-xl border border-blue-800/40">
-                  <span className="text-base">🛕</span>
-                  <span>Udupi Temple Silhouettes</span>
+              {/* Groom's Roots Coastal GSB Heritage Emblem - Borderless & Seamlessly Embedded */}
+              <div className="my-4 flex flex-col items-center justify-center text-center group/emblem cursor-pointer">
+                <div className="relative flex items-center justify-center transition-transform duration-300 group-hover/emblem:scale-105">
+                  <div className="absolute inset-0 rounded-full bg-blue-500/10 blur-xl scale-90 pointer-events-none" />
+                  <img
+                    src="/coastal-heritage-emblem.jpg"
+                    alt="GSB Konkani Coastal Heritage Seal"
+                    className="w-48 h-48 sm:w-56 sm:h-56 object-contain drop-shadow-[0_12px_24px_rgba(212,175,55,0.25)] select-none pointer-events-none"
+                    style={{ clipPath: "circle(49.2% at 50% 50%)" }}
+                  />
                 </div>
-                <div className="flex items-center gap-2 text-xs text-blue-200/90 bg-blue-950/50 p-2 rounded-xl border border-blue-800/40">
-                  <span className="text-base">🌴</span>
-                  <span>Coconut Groves & Maravanthe Sea</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-blue-200/90 bg-blue-950/50 p-2 rounded-xl border border-blue-800/40">
-                  <span className="text-base">🪔</span>
-                  <span>Sacred Deepa & Konkani Heritage</span>
+                <div className="text-[11px] font-semibold text-amber-300 mt-2 tracking-wide font-serif">
+                  GSB Konkani Coastal Heritage Seal
                 </div>
               </div>
 
@@ -229,19 +229,19 @@ export const HomeHero = ({ onOpenInviteCard, onOpenGames, onOpenStream }) => {
                 </p>
               </div>
 
-              {/* Dandeli Badges */}
-              <div className="mt-5 space-y-2">
-                <div className="flex items-center gap-2 text-xs text-emerald-200/90 bg-emerald-950/50 p-2 rounded-xl border border-emerald-800/40">
-                  <span className="text-base">🌊</span>
-                  <span>River Kali White-Water Rapids</span>
+              {/* Bride's Roots Dandeli Rainforest Emblem - Borderless & Seamlessly Embedded */}
+              <div className="my-4 flex flex-col items-center justify-center text-center group/emblem cursor-pointer">
+                <div className="relative flex items-center justify-center transition-transform duration-300 group-hover/emblem:scale-105">
+                  <div className="absolute inset-0 rounded-full bg-emerald-500/10 blur-xl scale-90 pointer-events-none" />
+                  <img
+                    src="/dandeli-heritage-emblem.jpg"
+                    alt="Dandeli Rainforest & Kali River Seal"
+                    className="w-48 h-48 sm:w-56 sm:h-56 object-cover drop-shadow-[0_12px_24px_rgba(16,185,129,0.25)] select-none pointer-events-none"
+                    style={{ clipPath: "circle(46.4% at 50% 50%)" }}
+                  />
                 </div>
-                <div className="flex items-center gap-2 text-xs text-emerald-200/90 bg-emerald-950/50 p-2 rounded-xl border border-emerald-800/40">
-                  <span className="text-base">🦜</span>
-                  <span>Malabar Pied Hornbill Sanctuary</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-emerald-200/90 bg-emerald-950/50 p-2 rounded-xl border border-emerald-800/40">
-                  <span className="text-base">⛰️</span>
-                  <span>Syntheri Rocks & Misty Ghats</span>
+                <div className="text-[11px] font-semibold text-emerald-300 mt-2 tracking-wide font-serif">
+                  Dandeli Rainforest & Kali River Seal
                 </div>
               </div>
 
