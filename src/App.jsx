@@ -61,6 +61,14 @@ function WeddingPortalContent() {
                 const el = document.getElementById("fun-and-joy");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
+              onExploreCoastal={() => {
+                const el = document.getElementById("area-gems") || document.getElementById("explore");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              onExploreForest={() => {
+                const el = document.getElementById("area-gems") || document.getElementById("explore");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
             />
 
             {/* 1. Heritage and Origins */}

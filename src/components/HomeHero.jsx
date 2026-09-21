@@ -15,8 +15,34 @@ import {
   Music
 } from "lucide-react";
 
-export const HomeHero = ({ onOpenInviteCard, onOpenGames, onOpenStream }) => {
+export const HomeHero = ({ 
+  onOpenInviteCard, 
+  onOpenGames, 
+  onOpenStream,
+  onExploreCoastal,
+  onExploreForest
+}) => {
   const { weddingDetails, activeTheme, switchTheme, currentUser, isMusicPlaying, setIsMusicPlaying } = useWedding();
+
+  const handleExploreCoastal = () => {
+    switchTheme("coastal");
+    if (onExploreCoastal) {
+      onExploreCoastal();
+    } else {
+      const el = document.getElementById("area-gems") || document.getElementById("explore");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleExploreForest = () => {
+    switchTheme("forest");
+    if (onExploreForest) {
+      onExploreForest();
+    } else {
+      const el = document.getElementById("area-gems") || document.getElementById("explore");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -102,8 +128,8 @@ export const HomeHero = ({ onOpenInviteCard, onOpenGames, onOpenStream }) => {
               </div>
 
               <button
-                onClick={() => switchTheme("coastal")}
-                className="mt-5 w-full py-2 px-3 rounded-xl text-xs font-semibold bg-[#0F4C81]/60 hover:bg-[#0F4C81] text-cyan-200 border border-cyan-400/40 transition-colors flex items-center justify-center gap-1.5"
+                onClick={handleExploreCoastal}
+                className="mt-5 w-full py-2 px-3 rounded-xl text-xs font-semibold bg-[#0F4C81]/60 hover:bg-[#0F4C81] text-cyan-200 border border-cyan-400/40 transition-colors flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
               >
                 <span>Explore Coastal Heritage</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -246,8 +272,8 @@ export const HomeHero = ({ onOpenInviteCard, onOpenGames, onOpenStream }) => {
               </div>
 
               <button
-                onClick={() => switchTheme("forest")}
-                className="mt-5 w-full py-2 px-3 rounded-xl text-xs font-semibold bg-[#2E6F40]/60 hover:bg-[#2E6F40] text-emerald-200 border border-emerald-400/40 transition-colors flex items-center justify-center gap-1.5"
+                onClick={handleExploreForest}
+                className="mt-5 w-full py-2 px-3 rounded-xl text-xs font-semibold bg-[#2E6F40]/60 hover:bg-[#2E6F40] text-emerald-200 border border-emerald-400/40 transition-colors flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
               >
                 <span>Explore Forest Heritage</span>
                 <ArrowRight className="w-3.5 h-3.5" />

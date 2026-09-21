@@ -1,5 +1,5 @@
 import React from "react";
-import { Waves, Trees, Sparkles } from "lucide-react";
+import { Waves, Trees, Sparkles, ArrowRight } from "lucide-react";
 
 export const HeritageAndOrigins = () => {
   return (
@@ -46,9 +46,19 @@ export const HeritageAndOrigins = () => {
             <div className="text-[11px] font-semibold text-amber-300">
               Coastal Yakshagana & Cultural Roots
             </div>
-            <div className="text-[10px] text-slate-400">
+            <div className="text-[10px] text-slate-400 mb-3">
               Temple Chariots • Ancient Rites • Arabian Sea
             </div>
+            <button
+              onClick={() => {
+                const el = document.getElementById("area-gems") || document.getElementById("explore");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="w-full py-2 px-3 rounded-xl text-xs font-semibold bg-[#0F4C81]/60 hover:bg-[#0F4C81] text-cyan-200 border border-cyan-400/40 transition-colors flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
+            >
+              <span>Explore Coastal Heritage</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
           </div>
         </div>
 
@@ -85,9 +95,19 @@ export const HeritageAndOrigins = () => {
             <div className="text-[11px] font-semibold text-emerald-300">
               Dandeli Rainforest & Kali River Heritage
             </div>
-            <div className="text-[10px] text-slate-400">
+            <div className="text-[10px] text-slate-400 mb-3">
               Hornbill Canopy • Western Ghats • River Rapids
             </div>
+            <button
+              onClick={() => {
+                const el = document.getElementById("area-gems") || document.getElementById("explore");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="w-full py-2 px-3 rounded-xl text-xs font-semibold bg-[#2E6F40]/60 hover:bg-[#2E6F40] text-emerald-200 border border-emerald-400/40 transition-colors flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
+            >
+              <span>Explore Forest Heritage</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
           </div>
         </div>
       </div>

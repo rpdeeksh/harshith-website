@@ -4,19 +4,29 @@ import { Compass, Waves, Trees } from "lucide-react";
 
 export const SpecialGuestAndCulture = () => {
   return (
-    <section id="explore" className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+    <section id="explore" data-section="area-gems" className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 scroll-mt-24 relative">
+      {/* Anchor for direct area-gems navigation */}
+      <div id="area-gems" className="absolute -top-24" />
+
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto">
-        <h2 className="font-playfair text-2xl sm:text-3xl font-bold text-white tracking-wide">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[#D4AF37] text-xs font-semibold uppercase tracking-wider mb-2">
+          <Compass className="w-3.5 h-3.5 text-amber-400" />
+          <span>Outstation Guide & Cultural Heritage</span>
+        </div>
+        <h2 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-wide">
           Area Gems
         </h2>
         <div className="w-16 h-0.5 bg-[#D4AF37] mx-auto mt-2 opacity-70"></div>
+        <p className="text-xs sm:text-sm text-slate-300 mt-2 font-serif italic">
+          "From the serene coastal shores of Kundapura and Udupi to the misty rainforests and roaring Kali River of Dandeli."
+        </p>
       </div>
 
       {/* Cultural Showcase Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Coastal Karnataka Showcase */}
-        <div className="rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-[#0F4C81]/20 via-slate-900 to-slate-950 border border-[#0F4C81]/40 shadow-xl space-y-4">
+        <div id="coastal-area-gems" className="rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-[#0F4C81]/20 via-slate-900 to-slate-950 border border-[#0F4C81]/40 shadow-xl space-y-4 scroll-mt-28">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-2xl">🌊</span>
@@ -58,7 +68,7 @@ export const SpecialGuestAndCulture = () => {
         </div>
 
         {/* Dandeli Showcase */}
-        <div className="rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-[#2E6F40]/20 via-slate-900 to-slate-950 border border-[#2E6F40]/40 shadow-xl space-y-4">
+        <div id="forest-area-gems" className="rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-[#2E6F40]/20 via-slate-900 to-slate-950 border border-[#2E6F40]/40 shadow-xl space-y-4 scroll-mt-28">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-2xl">🌿</span>

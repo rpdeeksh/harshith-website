@@ -353,12 +353,12 @@ export const WEDDING_FEAST_MENU = [
     image: "/patrode-watercolor.jpg"
   },
   {
-    name: "Moogachem Godshe",
-    kannada: "ಗೋಡ್ಶೆ",
-    category: "Konkani Festive Dessert",
-    desc: "A warm, soul-soothing festive Konkani pudding (Moogachem Godshem) made with roasted moong dal, rich coconut milk, organic jaggery, and crushed green cardamom.",
-    tag: "Soul-Soothing",
-    image: "/godshe-watercolor.jpg"
+    name: "Patholi (Turmeric Leaf Rolls)",
+    kannada: "ಪಾಥೋಳಿ",
+    category: "Steamed Turmeric Leaf Sweet",
+    desc: "Sacred sweet steamed delicacy: soft rice rolls filled with fresh grated coconut, cardamom, and organic jaggery, wrapped and steamed inside fragrant turmeric leaves (haldi paan).",
+    tag: "Aromatic Heritage",
+    image: "/patholi-watercolor.jpg"
   },
   {
     name: "Gajbaje",

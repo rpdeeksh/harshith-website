@@ -28,7 +28,7 @@ export const RoyalPangath = () => {
           name: "Grand Royal Pangath Banquet",
           kannada: "ಪಾರಮ್ಪರಿಕ ಪಙ್ಕ್ತಿ ಭೋಜನ",
           category: "Sacred Banana Leaf Feast (9 Dishes)",
-          desc: "The time-honored GSB Konkani wedding banquet spread on a continuous green plantain leaf: hot red boiled rice, golden Dalitoy tempered with hing and ghee, crispy Jeevkadgi Phodi, fiery Batate Song, Tendle Bibbe Upkari, sweet-savory Pineapple Sasam, crunchy Happolu & Vodi, authentic Patrode, Moogachem Godshe, and celebration Gajbaje.",
+          desc: "The time-honored GSB Konkani wedding banquet spread on a continuous green plantain leaf: hot red boiled rice, golden Dalitoy tempered with hing and ghee, crispy Jeevkadgi Phodi, fiery Batate Song, Tendle Bibbe Upkari, sweet-savory Pineapple Sasam, crunchy Happolu & Vodi, authentic Patrode, fragrant Patholi, and celebration Gajbaje.",
           tag: "The Complete Banquet",
           image: "/gsb-royal-pangath-watercolor.jpg"
         })}

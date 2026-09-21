@@ -58,13 +58,13 @@ export const SideScrollEvents = () => {
             <div className="h-1.5 bg-gradient-to-r from-[#0F4C81] via-[#D4AF37] to-[#2E6F40]" />
 
             {/* Image Header with Cultural Icon & Overlay */}
-            <div className="relative h-44 overflow-hidden">
+            <div className="relative h-44 overflow-hidden bg-[#FAF8F5]">
               <img
                 src={event.coverImage}
                 alt={event.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent pointer-events-none" />
               
               {/* Event Cultural Icon Badge */}
               <div className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-slate-950/85 backdrop-blur-md border border-[#D4AF37]/60 text-amber-300 text-xs font-semibold flex items-center gap-1.5 shadow-lg">
