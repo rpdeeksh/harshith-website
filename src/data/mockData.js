@@ -18,7 +18,7 @@ export const WEDDING_DETAILS = {
   brideName: "Nidhi",
   brideFamilyTitle: "Khambadkone Family",
   brideParents: "Sri Ravi K & Smt. Rashmi K",
-  brideGrandparents: "Late Sri Dayanand K & Smt. Saraswathi K",
+  brideGrandparents: "Late Shri Ramakant Khambadkone and Late Smt Vimala Khambadkone",
   brideRoots: "Dandeli & Western Ghats Heritage",
   brideSideContact: {
     name: "Ananth K (Bride's Coordinator)",
@@ -47,8 +47,22 @@ export const WEDDING_DETAILS = {
   city: "Nagoor / Kundapura, Karnataka",
   primaryVenue: "Shri Gopal Krishna Kalamandir",
   venueAddress: "Adjacent to MVSSN, Nagoor, Kundapura Taluk, Udupi District, Karnataka 576219",
-  mapUrl: "https://share.google/DyDrvV1ta8c0rMIScP",
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=Shri+Gopal+Krishna+Kalamandir%2C+Nagoor%2C+Kundapura%2C+Karnataka",
   hashtag: "#FromCoastToGhats • #HarshithWedsNidhi",
+  weddingHashtags: [
+    "#HarshithWedsNidhi",
+    "#FromCoastToGhats",
+    "#HarshithNidhiForever",
+    "#SeaMeetsForest",
+    "#HNKiShaadi",
+    "#HarNiKiKahani",
+    "#CoastToGhatsLove",
+    "#HarshithFoundHisNidhi",
+    "#NidhiSaidYesToHarshith",
+    "#TideToTrailTogether",
+    "#TwoRootsOneLove",
+    "#TheHarNiChapter"
+  ],
   liveStreamUrl: "https://www.youtube.com/embed/live_stream_placeholder",
   cardImage: "/nidhi-harshith-invite.jpg",
   logoImage: "/wedding-logo.png",
@@ -82,14 +96,21 @@ export const WEDDING_DETAILS = {
         tag: "Premium Town Stay"
       },
       { 
-        name: "Fortune Fisherman's Wharf & Coastal Resort", 
+        name: "Hotel Jewel Park, Hemmady",
         area: "Kundapura (22 km)", 
         phone: "+91 8254 230001",
-        mapUrl: "https://maps.google.com/?q=Fortune+Fishermans+Wharf+Kundapura",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Hotel+Jewel+Park%2C+Hemmady%2C+Karnataka",
         tag: "Beachfront Luxury"
       }
     ]
   }
+};
+
+export const LOCATION_LINKS = {
+  groomKuteera: "https://maps.app.goo.gl/K7vn5Rk7bMBWSRjm7?g_st=aw",
+  weddingHall: "https://maps.app.goo.gl/TQZC6zXtqZFNLXbZ9?g_st=aw",
+  beachHouse: "https://maps.app.goo.gl/J9w4ih3HaqGNVyVg7?g_st=aw",
+  sabhaBhavan: "https://maps.app.goo.gl/chgvffCt6ySKybzL7"
 };
 
 export const INITIAL_WEDDING_DETAILS = WEDDING_DETAILS;
@@ -188,7 +209,7 @@ export const INITIAL_EVENTS = [
     time: "11:00 AM - 01:30 PM",
     venue: "Groom Kuteera",
     address: "Nagoor / Kundapura, Coastal Karnataka",
-    mapUrl: "https://maps.google.com/?q=Nagoor+Karnataka",
+    mapUrl: LOCATION_LINKS.groomKuteera,
     dressCode: "Temple Turmeric Yellow & Kasavu Cream",
     description: "Sacred turmeric paste infused with coastal sandalwood and river water applied with blessings by aunts and elders amidst floral showers.",
     coverImage: "/haldi-ceremony-watercolor.jpg",
@@ -204,7 +225,7 @@ export const INITIAL_EVENTS = [
     time: "06:00 PM - 09:30 PM",
     venue: "Groom Kuteera",
     address: "Nagoor / Kundapura, Coastal Karnataka",
-    mapUrl: "https://maps.google.com/?q=Nagoor+Karnataka",
+    mapUrl: LOCATION_LINKS.groomKuteera,
     dressCode: "Coastal Teal & Forest Fern Green (Traditional Festive)",
     description: "Intricate herbal henna designs inspired by coconut fronds and forest leaves, accompanied by folk Konkani geeths and laughter.",
     coverImage: "/mehendi-ceremony-watercolor.jpg",
@@ -220,7 +241,7 @@ export const INITIAL_EVENTS = [
     time: "05:30 PM Onwards",
     venue: "Gopal Krishna Kala Mandir, Nagoor",
     address: "Adjacent to MVSSN, Nagoor, Karnataka",
-    mapUrl: "https://maps.google.com/?q=Shri+Gopal+Krishna+Kalamandir+Nagoor",
+    mapUrl: LOCATION_LINKS.weddingHall,
     dressCode: "Regal Silk & Traditional Zari Sarees / Kurta Pajama",
     description: "The auspicious Konkani ring exchange ceremony with exchange of flowers, coconuts, fruit baskets, and traditional music by Chande & Flute.",
     coverImage: "/gsb-phoolmuddi-watercolor.jpg",
@@ -236,7 +257,7 @@ export const INITIAL_EVENTS = [
     time: "Muhurtham: 10:15 AM",
     venue: "Gopal Krishna Kala Mandir, Nagoor",
     address: "Adjacent to MVSSN, Nagoor, Karnataka",
-    mapUrl: "https://maps.google.com/?q=Shri+Gopal+Krishna+Kalamandir+Nagoor",
+    mapUrl: LOCATION_LINKS.weddingHall,
     dressCode: "Kanjeevaram Silk & Kasavu Zari Dhoti with Angavastram",
     description: "The sacred Vedic vivah: Kanyadaan, Mangalasutra Dharane, Saptapadi around the holy fire, and blessings from family priests and elders.",
     coverImage: "/gsb-wedding-watercolor.jpg",
@@ -250,9 +271,9 @@ export const INITIAL_EVENTS = [
     day: "Day 6 - Evening",
     date: "Wednesday, 16 December 2026",
     time: "07:00 PM Onwards",
-    venue: "Shree Vidyadhiraj Sabha Bhavan, Dandeli",
+    venue: "Shri Vidhyadhiraj Sabha Bhavan, Dandeli",
     address: "Dandeli, Uttara Kannada, Karnataka",
-    mapUrl: "https://maps.google.com/?q=Shree+Vidyadhiraj+Sabha+Bhavan+Dandeli",
+    mapUrl: LOCATION_LINKS.sabhaBhavan,
     dressCode: "Royal Evening Elegance & Indo-Western Couture",
     description: "An enchanting evening of music, celebration, candid photography, and a lavish celebratory royal feast in the heart of Dandeli.",
     coverImage: "/wedding-reception-watercolor.jpg",
@@ -377,25 +398,29 @@ export const KARNATAKA_DESTINATIONS = {
       name: "Udupi Sri Krishna Temple & Kanakana Kindi",
       distance: "40 km from Kalamandir",
       desc: "World-renowned temple established by Sri Madhvacharya. View the deity through the sacred silver Kanakana Kindi window.",
-      image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80"
+      image: "/udupi.jpeg",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Udupi+Sri+Krishna+Temple"
     },
     {
       name: "Maravanthe Beach & Souparnika River",
       distance: "16 km from Kalamandir",
       desc: "One of India's most scenic highways: the roaring Arabian Sea on one side and the calm Souparnika River on the other.",
-      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+      image: "/marvanthe.jpeg",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Maravanthe+Beach+Karnataka"
     },
     {
       name: "Kollur Sri Mookambika Temple",
       distance: "48 km from Kalamandir",
       desc: "Nestled in the lush Kodachadri hill foothills, a sacred Shakti Peetha revered by millions.",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80"
+      image: "/mookambika.jpeg",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Kollur+Mookambika+Temple"
     },
     {
       name: "Kodi Beach & Sea Walkway",
       distance: "14 km from Kalamandir",
       desc: "Pristine golden sands, peaceful mangrove backwaters, and a breeze-cooled sea promenade.",
-      image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=600&q=80"
+      image: "/kodi.jpeg",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Kodi+Beach+Karnataka"
     }
   ],
   dandeli: [
@@ -403,19 +428,22 @@ export const KARNATAKA_DESTINATIONS = {
       name: "River Kali White-Water Rapids",
       distance: "Bride's Native Land",
       desc: "The exhilarating lifeblood of Dandeli, renowned for river rafting, jungle coracle rides, and natural jacuzzis.",
-      image: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=600&q=80"
+      image: "/rafting.jpeg",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Kali+River+Rapids+Dandeli"
     },
     {
       name: "Syntheri Rocks Monolith",
       distance: "Deep Western Ghats",
       desc: "A breathtaking 300-foot volcanic monolithic granite cliff carved over millennia by the Kaneri River.",
-      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
+      image: "/syntheri%20rocks.jpeg",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Syntheri+Rocks+Dandeli"
     },
     {
       name: "Dandeli Wildlife & Hornbill Reserve",
       distance: "Rainforest Canopy",
       desc: "Home to all four South Indian hornbill species, black panthers, majestic Asian elephants, and towering teak jungles.",
-      image: "https://images.unsplash.com/photo-1555169062-013468b47731?auto=format&fit=crop&w=600&q=80"
+      image: "/dnd.jpeg",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Dandeli+Wildlife+Sanctuary"
     }
   ]
 };
@@ -433,14 +461,16 @@ export const INITIAL_PHOTOS = [
     id: "ph-2",
     title: "Coastal Sunset at Maravanthe",
     category: "Pre-wedding",
-    url: "/maravanthe-sunset-watercolor.jpg",
+    url: "/marvanthe.jpeg",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Maravanthe+Beach+Karnataka",
     caption: "Where coastal waves whisper ancient blessings to the horizon"
   },
   {
     id: "ph-3",
     title: "Dandeli Kali River & Misty Jungle",
     category: "Pre-wedding",
-    url: "/dandeli-kali-river-watercolor.jpg",
+    url: "/rafting.jpeg",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Kali+River+Rapids+Dandeli",
     caption: "Among the evergreen canopies and rushing waters of the Western Ghats"
   },
   {

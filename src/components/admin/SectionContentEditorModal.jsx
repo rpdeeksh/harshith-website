@@ -260,7 +260,7 @@ export const SectionContentEditorModal = ({ isOpen, onClose, initialSection = "o
                 3. Royal Pangath Feast Menu Settings
               </h4>
               <p className="text-slate-400 text-[11px]">
-                Manage authentic traditional GSB delicacies (Dalitoy, Batata Song, Tendle Bibbe, Pineapple Sasam, etc.)
+                ನಿರ್ವಹಿಸಿ ಸಾಂಪ್ರದಾಯಿಕ ಕೊಂಕಣಿ ಸವಿಗಳು (ದಾಳಿತೊಯ್, ಬಟಾಟೆ ಸಾಂಗ್, ತೆಂಡೆ ಬಿಬ್ಬೆ, ಅನಾನಸ್ ಸಾಸಂ ಇತ್ಯಾದಿ)
               </p>
 
               <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
@@ -330,7 +330,7 @@ export const SectionContentEditorModal = ({ isOpen, onClose, initialSection = "o
                   </p>
                 </div>
                 <div className="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-900/50">
-                  <span className="text-emerald-300 font-bold block mb-1">🌿 Dandeli Wilderness</span>
+                  <span className="text-emerald-300 font-bold block mb-1">🌿 Western Ghats</span>
                   <p className="text-slate-300 text-[11px]">
                     River Kali Rapids, Syntheri Rocks Monolith, and Hornbill Reserve Canopy.
                   </p>

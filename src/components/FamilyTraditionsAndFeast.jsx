@@ -168,7 +168,7 @@ export const FamilyTraditionsAndFeast = () => {
             <div className="w-full h-72 sm:h-80 relative bg-slate-900">
               <iframe
                 title="Wedding Venue Map"
-                src="https://maps.google.com/maps?q=Shri+Gopal+Krishna+Kalamandir+Nagoor&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.app.goo.gl/TQZC6zXtqZFNLXbZ9?g_st=aw"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

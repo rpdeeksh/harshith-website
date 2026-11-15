@@ -26,11 +26,11 @@ export const HeritageAndOrigins = () => {
             </div>
 
             <div className="p-3 rounded-2xl bg-blue-950/40 border border-blue-800/40 text-xs text-blue-200/90 leading-relaxed mb-4">
-              Born into the rich GSB Konkani traditions of Coastal Karnataka, surrounded by the Arabian Sea, temple culture, and family values.
+              The Prabhu family heritage is shaped by the GSB Konkani communities of the Kundapura and Udupi coast, where temple service, learning, and welcoming every guest are cherished across generations.
             </div>
 
             <p className="text-xs sm:text-sm text-slate-300/85 leading-relaxed space-y-2">
-              Growing up amidst the holy chimes of Udupi Krishna Temple, fragrant jasmine strings, festive Pangath feasts, and the roaring golden shores of Maravanthe, Harshith carries a deep reverence for family traditions, humility, and the warmth of coastal hospitality.
+              Family memories are carried through evening prayers, conversations around the family meal, and the annual rhythm of coastal festivals. Harshith brings that quiet legacy of responsibility, music, and generous coastal hospitality into this new chapter.
             </p>
           </div>
 
@@ -75,11 +75,11 @@ export const HeritageAndOrigins = () => {
             </div>
 
             <div className="p-3 rounded-2xl bg-emerald-950/40 border border-emerald-800/40 text-xs text-emerald-200/90 leading-relaxed mb-4">
-              Raised amidst the breathtaking forests and rivers of Dandeli, where nature, adventure, and simplicity shaped her journey.
+              The Khambadkone family roots reach into Dandeli and the Western Ghats, a landscape where forest stewardship, community bonds, and respect for the living world are part of everyday life.
             </div>
 
             <p className="text-xs sm:text-sm text-slate-300/85 leading-relaxed space-y-2">
-              Nidhi grew up listening to the rhythm of white-water rapids on River Kali, bird songs from high teak tree canopies, and the peaceful mountain mist of the Western Ghats. Her heart thrives on love for wildlife, genuine warmth, and graceful simplicity.
+              The region's monsoon trails, river crossings, and bird-filled teak canopies form a living archive of family stories. Nidhi carries forward its sense of curiosity, care for nature, and unhurried warmth as both families come together.
             </p>
           </div>
 

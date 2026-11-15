@@ -68,6 +68,16 @@
   background: linear-gradient(to right, #2563eb, #60a5fa, #fbbf24);
 }
 
+/* Keep the gallery imagery soft and painterly without changing source photos. */
+.watercolor-memory {
+  filter: saturate(0.72) contrast(0.9) brightness(0.96) sepia(0.08);
+  transition: filter 0.3s ease;
+}
+
+.watercolor-memory:hover {
+  filter: saturate(0.82) contrast(0.94) brightness(0.98) sepia(0.06);
+}
+
 /* Royal Glassmorphism */
 .royal-glass {
   background: rgba(15, 23, 42, 0.75);

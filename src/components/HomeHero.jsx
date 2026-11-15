@@ -93,7 +93,7 @@ export const HomeHero = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
             
             {/* Left Visual: Coastal Karnataka (Groom's Roots) */}
-            <div className="lg:col-span-3 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r border-blue-900/40 bg-gradient-to-br from-[#0F4C81]/25 via-slate-950/60 to-transparent flex flex-col justify-between h-full relative overflow-hidden group">
+            <div className="order-2 lg:order-none lg:col-span-3 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r border-blue-900/40 bg-gradient-to-br from-[#0F4C81]/25 via-slate-950/60 to-transparent flex flex-col justify-between h-full relative overflow-hidden group">
               <div className="absolute -right-8 -bottom-8 text-8xl opacity-10 select-none pointer-events-none group-hover:scale-110 transition-transform">
                 🌊
               </div>
@@ -137,7 +137,7 @@ export const HomeHero = ({
             </div>
 
             {/* Center Visual: The Couple, Shloka & Interactive Countdown */}
-            <div className="lg:col-span-6 p-6 sm:p-10 text-center flex flex-col items-center justify-center relative">
+            <div className="order-1 lg:order-none lg:col-span-6 p-6 sm:p-10 text-center flex flex-col items-center justify-center relative">
               
               {/* Auspicious Shloka */}
               <div className="text-amber-400 font-garamond text-xs sm:text-sm tracking-widest uppercase mb-2">
@@ -197,13 +197,13 @@ export const HomeHero = ({
                     <div className="font-mono text-xl sm:text-2xl font-bold text-emerald-300">
                       {String(timeLeft.minutes).padStart(2, "0")}
                     </div>
-                    <div className="text-[10px] uppercase text-slate-400 font-medium">Minutes</div>
+                    <div className="text-[10px] uppercase text-slate-400 font-medium">Mins</div>
                   </div>
                   <div className="bg-slate-950/80 p-2 sm:p-3 rounded-xl border border-slate-800 text-center">
                     <div className="font-mono text-xl sm:text-2xl font-bold text-cyan-300">
                       {String(timeLeft.seconds).padStart(2, "0")}
                     </div>
-                    <div className="text-[10px] uppercase text-slate-400 font-medium">Seconds</div>
+                    <div className="text-[10px] uppercase text-slate-400 font-medium">Secs</div>
                   </div>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export const HomeHero = ({
             </div>
 
             {/* Right Visual: Dandeli Rainforest (Bride's Roots) */}
-            <div className="lg:col-span-3 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-emerald-900/40 bg-gradient-to-bl from-[#2E6F40]/25 via-slate-950/60 to-transparent flex flex-col justify-between h-full relative overflow-hidden group">
+            <div className="order-3 lg:order-none lg:col-span-3 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-emerald-900/40 bg-gradient-to-bl from-[#2E6F40]/25 via-slate-950/60 to-transparent flex flex-col justify-between h-full relative overflow-hidden group">
               <div className="absolute -right-8 -bottom-8 text-8xl opacity-10 select-none pointer-events-none group-hover:scale-110 transition-transform">
                 🌿
               </div>

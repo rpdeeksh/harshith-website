@@ -85,7 +85,7 @@ export const PhotoGallery = () => {
               <img
                 src={photo.url}
                 alt={photo.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="watercolor-memory w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
               
@@ -138,7 +138,7 @@ export const PhotoGallery = () => {
             </button>
 
             <div className="max-h-[75vh] overflow-hidden bg-black flex items-center justify-center">
-              <img src={activePhoto.url} alt={activePhoto.title} className="max-h-[75vh] w-auto object-contain" />
+              <img src={activePhoto.url} alt={activePhoto.title} className="watercolor-memory max-h-[75vh] w-auto object-contain" />
             </div>
 
             <div className="p-6 bg-slate-900 text-center">

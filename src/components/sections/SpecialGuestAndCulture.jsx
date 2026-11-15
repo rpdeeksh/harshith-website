@@ -123,7 +123,7 @@ export const SpecialGuestAndCulture = () => {
             {KARNATAKA_DESTINATIONS.coastal.map((dest, idx) => (
               <div key={idx} className="rounded-2xl overflow-hidden bg-slate-900/90 border border-blue-900/40 flex flex-col group">
                 <div className="h-32 overflow-hidden relative">
-                  <img src={dest.image} alt={dest.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={dest.image} alt={dest.name} className="watercolor-memory w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-slate-950/80 text-[10px] text-cyan-300 font-mono">
                     {dest.distance}
                   </div>
@@ -131,6 +131,7 @@ export const SpecialGuestAndCulture = () => {
                 <div className="p-3 flex-1 flex flex-col justify-between">
                   <h4 className="font-bold text-xs text-white mb-1">{dest.name}</h4>
                   <p className="text-[11px] text-slate-400 leading-snug">{dest.desc}</p>
+                  <a href={dest.mapUrl} target="_blank" rel="noopener noreferrer" className="mt-3 text-[10px] text-cyan-300 underline underline-offset-2">Open location ↗</a>
                 </div>
               </div>
             ))}
@@ -141,14 +142,14 @@ export const SpecialGuestAndCulture = () => {
         <div className="space-y-4">
           <div className="flex items-center gap-2 pb-2 border-b border-[#2E6F40]/50">
             <span className="text-2xl">🌿</span>
-            <h3 className="font-playfair text-xl font-bold text-emerald-200">Explore Dandeli Wilderness</h3>
+            <h3 className="font-playfair text-xl font-bold text-emerald-200">Explore Western Ghats</h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {KARNATAKA_DESTINATIONS.dandeli.map((dest, idx) => (
               <div key={idx} className="rounded-2xl overflow-hidden bg-slate-900/90 border border-emerald-900/40 flex flex-col group">
                 <div className="h-32 overflow-hidden relative">
-                  <img src={dest.image} alt={dest.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={dest.image} alt={dest.name} className="watercolor-memory w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-slate-950/80 text-[10px] text-emerald-300 font-mono">
                     {dest.distance}
                   </div>
@@ -156,6 +157,7 @@ export const SpecialGuestAndCulture = () => {
                 <div className="p-3 flex-1 flex flex-col justify-between">
                   <h4 className="font-bold text-xs text-white mb-1">{dest.name}</h4>
                   <p className="text-[11px] text-slate-400 leading-snug">{dest.desc}</p>
+                  <a href={dest.mapUrl} target="_blank" rel="noopener noreferrer" className="mt-3 text-[10px] text-emerald-300 underline underline-offset-2">Open location ↗</a>
                 </div>
               </div>
             ))}

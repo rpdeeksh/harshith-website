@@ -1,5 +1,6 @@
 import React from "react";
 import { useWedding } from "../../context/WeddingContext";
+import { LOCATION_LINKS } from "../../data/mockData";
 import { 
   MapPin, 
   Car, 
@@ -28,7 +29,7 @@ export const WeddingVenueAndTravel = () => {
           <div className="w-full h-72 sm:h-80 relative bg-slate-900">
             <iframe
               title="Wedding Venue Map"
-              src="https://maps.google.com/maps?q=Shri+Gopal+Krishna+Kalamandir+Nagoor&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src={LOCATION_LINKS.weddingHall}
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -48,7 +49,7 @@ export const WeddingVenueAndTravel = () => {
             </div>
 
             <a
-              href="https://share.google/DyDrvV1ta8c0rMIScP"
+              href={LOCATION_LINKS.weddingHall}
               target="_blank"
               rel="noopener noreferrer"
               className="py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:opacity-90 text-white font-semibold text-xs flex items-center gap-2 shadow-md flex-shrink-0"
@@ -56,6 +57,18 @@ export const WeddingVenueAndTravel = () => {
               <span>Open Exact Location</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              ["Groom Kuteera", LOCATION_LINKS.groomKuteera],
+              ["Wedding Hall", LOCATION_LINKS.weddingHall],
+              ["Beach Side House", LOCATION_LINKS.beachHouse]
+            ].map(([label, url]) => (
+              <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="rounded-2xl border border-blue-400/25 bg-blue-950/30 px-4 py-3 text-xs text-cyan-200 hover:border-amber-400/60 transition-colors">
+                <MapPin className="inline w-3.5 h-3.5 mr-1 text-amber-300" />{label}
+              </a>
+            ))}
           </div>
         </div>
 

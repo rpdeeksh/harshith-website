@@ -16,7 +16,6 @@ import { GuestAssistance } from "./components/sections/GuestAssistance";
 import { LiveStreamAndGames } from "./components/LiveStreamAndGames";
 import { AdminDashboard } from "./components/admin/AdminDashboard";
 import { InvitationCardGenerator } from "./components/InvitationCardGenerator";
-import { AudioPlayer } from "./components/AudioPlayer";
 import { Phone } from "lucide-react";
 
 function WeddingPortalContent() {
@@ -108,9 +107,6 @@ function WeddingPortalContent() {
         )}
       </main>
 
-      {/* Floating Traditional Shehnai & Bells Audio Player */}
-      <AudioPlayer />
-
       {/* Digital PNG Invitation Card Generator Modal */}
       <InvitationCardGenerator
         isOpen={isInviteCardOpen}
@@ -134,6 +130,12 @@ function WeddingPortalContent() {
 
           <div className="flex flex-col sm:flex-row items-center gap-4 text-slate-300 font-mono text-xs">
             <span className="text-[#D4AF37] font-semibold">{weddingDetails.hashtag}</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden lg:inline text-slate-400">
+              {(Array.isArray(weddingDetails.weddingHashtags)
+                ? weddingDetails.weddingHashtags
+                : []).join(" ")}
+            </span>
             <span className="hidden sm:inline">•</span>
             <span className="flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-cyan-400" />

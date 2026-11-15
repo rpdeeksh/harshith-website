@@ -25,7 +25,7 @@ export const RoyalPangath = () => {
       {/* Grand Royal Pangath Watercolor Feature Banner */}
       <div 
         onClick={() => setSelectedDish({
-          name: "Grand Royal Pangath Banquet",
+          name: "Royal Pangath",
           kannada: "ಪಾರಮ್ಪರಿಕ ಪಙ್ಕ್ತಿ ಭೋಜನ",
           category: "Sacred Banana Leaf Feast (9 Dishes)",
           desc: "The time-honored GSB Konkani wedding banquet spread on a continuous green plantain leaf: hot red boiled rice, golden Dalitoy tempered with hing and ghee, crispy Jeevkadgi Phodi, fiery Batate Song, Tendle Bibbe Upkari, sweet-savory Pineapple Sasam, crunchy Happolu & Vodi, authentic Patrode, fragrant Patholi, and celebration Gajbaje.",
@@ -119,7 +119,15 @@ export const RoyalPangath = () => {
                   <span>🍃</span>
                   <span>Pure GSB Traditional Recipe</span>
                 </div>
-                <span className="text-[10px] text-amber-400/80 font-serif italic">View Art →</span>
+                <a
+                  href={`https://www.google.com/search?q=${encodeURIComponent(`${dish.name} recipe`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(event) => event.stopPropagation()}
+                  className="text-[10px] text-amber-400/80 font-serif italic hover:text-amber-300 underline underline-offset-2"
+                >
+                  Find recipe ↗
+                </a>
               </div>
             </div>
           </div>
