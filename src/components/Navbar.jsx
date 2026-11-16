@@ -132,7 +132,7 @@ export const Navbar = ({ onOpenInviteCard }) => {
           <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={onOpenInviteCard}
-              className="py-2 px-3 sm:px-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-[#D4AF37]/40 text-amber-300 text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-sm hover:border-[#D4AF37]"
+              className="hidden sm:flex py-2 px-3 sm:px-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-[#D4AF37]/40 text-amber-300 text-xs font-semibold items-center gap-1.5 transition-all cursor-pointer shadow-sm hover:border-[#D4AF37]"
             >
               <Download className="w-3.5 h-3.5 text-amber-400" />
               <span className="hidden sm:inline">Invitation PNG</span>
